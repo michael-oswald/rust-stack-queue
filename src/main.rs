@@ -10,20 +10,27 @@ fn main() {
 fn queue_example() {
     println!("Queue example with VecDeque:");
     let mut queue = VecDeque::new();
+    println!("queue.push_back(1);");
     queue.push_back(1);
+    println!("current queue: {:?}\n", queue);
+    println!("queue.push_back(2);");
     queue.push_back(2);
+    println!("current queue: {:?}\n", queue);
+    println!("queue.push_back(3);");
     queue.push_back(3);
+    println!("current queue: {:?}\n", queue);
+    println!("queue.push_back(4);");
     queue.push_back(4);
 
     println!("current queue: {:?} \n", queue);
-    println!("Now pop_back() twice:\n");
+    println!("Now pop_front() twice:\n");
 
-    queue.pop_back();
-    queue.pop_back();
+    queue.pop_front();
+    queue.pop_front();
 
     println!("current queue: {:?} \n", queue);
 
-    println!("queue peek -> queue.get(queue.len()-1): {:?} \n", queue.get(queue.len() - 1));
+    println!("queue peek -> queue.get(0): {:?} \n", queue.get(0));
 
     println!("queue.clear() to remove all elements from the queue");
     queue.clear();

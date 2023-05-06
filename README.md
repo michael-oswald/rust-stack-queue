@@ -7,7 +7,7 @@ For stack and queue in this example we'll use the VecDeque data structure provid
 The docs say that it is a `A double-ended queue`, which means it can insert and remove elements from both ends
 of the structure. Thus, it can be used as a stack or a queue. Here are the [official docs](https://doc.rust-lang.org/stable/std/collections/struct.VecDeque.html)
 
-# TLDR stack and queue in rust
+# TLDR stack and queue in rust with VecDeque
 **Queue**
 ```
 // Queue - FIFO structure 
@@ -24,11 +24,11 @@ queue.push_back(3);
 queue.push_back(4);
 
 // remove 2 elements:
-queue.pop_back();
-queue.pop_back();
+queue.pop_front();
+queue.pop_front();
 
 // peek:
-queue.get(queue.len() - 1);
+queue.get(0);
 
 // clear:
 queue.clear();
